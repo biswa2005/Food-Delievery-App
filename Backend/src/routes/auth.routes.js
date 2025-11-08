@@ -3,12 +3,21 @@ import {
 	registerUser,
 	loginUser,
 	logoutUser,
+	registerFoodPartner,
+	loginFoodPartner,
+	logoutFoodPartner,
 } from "../controllers/auth.controllers.js";
 
 const router = express.Router();
 
-router.post("/register", registerUser);
-router.post("/login", loginUser);
-router.get("/logout", logoutUser);
+// User Auth API
+router.post("user/register", registerUser);
+router.post("user/login", loginUser);
+router.get("user/logout", logoutUser);
+
+// Food Partner Auth API
+router.post("food-partner/register", registerFoodPartner);
+router.post("food-partner/login", loginFoodPartner);
+router.get("food-partner/logout", logoutFoodPartner);
 
 export default router;
