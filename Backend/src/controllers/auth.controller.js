@@ -91,7 +91,7 @@ async function registerFoodPartner(req, res) {
 	const foodPartner = await foodPartnerModel.findOne({
 		email,
 	});
-	if (!foodPartner) {
+	if (foodPartner) {
 		return res.status(400).json({
 			message: "Food Partner Account Already Exists",
 		});
@@ -125,7 +125,7 @@ async function registerFoodPartner(req, res) {
 	res.status(201).json({
 		message: "Food Partner Account created successfully",
 		user: {
-			id: newFoodPartner._id,
+			_id: newFoodPartner._id,
 			name: newFoodPartner.name,
 			phone: newFoodPartner.phone,
 			email: newFoodPartner.email,
@@ -162,7 +162,7 @@ async function loginFoodPartner(req, res) {
 	res.status(200).json({
 		message: "Food Partner logged in successfully",
 		user: {
-			id: foodPartner._id,
+			_id: foodPartner._id,
 			name: foodPartner.name,
 			email: foodPartner.email,
 		},
