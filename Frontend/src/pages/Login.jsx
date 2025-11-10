@@ -83,7 +83,7 @@ const Login = () => {
 	};
 
 	return (
-		<div className="min-h-screen bg-linear-to-br from-blue-50 via-white to-purple-50 dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center p-4 transition-colors duration-500">
+		<div className="min-h-screen bg-linear-to-br from-blue-50 via-white to-purple-50 dark:bg-linear-to-br dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center p-4 transition-colors duration-500">
 			<div className="max-w-md w-full">
 				<div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 space-y-6 transition-colors duration-500">
 					<div className="text-center">

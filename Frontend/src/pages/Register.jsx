@@ -71,8 +71,8 @@ const Register = () => {
       className={`
         min-h-screen
         flex items-center justify-center p-4
-        bg-gradient-to-br from-blue-50 via-white to-purple-50
-        ${darkMode ? 'dark bg-gradient-to-br dark:from-gray-900 dark:via-gray-950 dark:to-gray-800' : ''}
+        bg-linear-to-br from-blue-50 via-white to-purple-50
+        ${darkMode ? 'dark bg-linear-to-br dark:from-gray-900 dark:via-gray-950 dark:to-gray-800' : ''}
       `}
     >
       <div className="max-w-md w-full">

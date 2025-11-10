@@ -1,9 +1,18 @@
 import express from "express";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 import authRoutes from "./routes/auth.routes.js";
 import foodRoutes from "./routes/food.route.js";
 
 const app = express();
+
+// CORS configuration
+app.use(
+	cors({
+		origin: process.env.FRONTEND_URL,
+		credentials: true,
+	})
+);
 
 app.use(express.json());
 app.use(cookieParser());

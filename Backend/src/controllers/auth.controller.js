@@ -124,7 +124,7 @@ async function registerFoodPartner(req, res) {
 
 	res.status(201).json({
 		message: "Food Partner Account created successfully",
-		user: {
+		food_Partner: {
 			_id: newFoodPartner._id,
 			name: newFoodPartner.name,
 			phone: newFoodPartner.phone,
@@ -138,7 +138,7 @@ async function loginFoodPartner(req, res) {
 	if (!email || !password) {
 		return res.status(400).json({ message: "All fields are required" });
 	}
-	const foodPartner = await User.findOne({ email });
+	const foodPartner = await foodPartnerModel.findOne({ email });
 	if (!foodPartner) {
 		return res.status(400).json({ message: "Invalid email or password" });
 	}
@@ -161,7 +161,7 @@ async function loginFoodPartner(req, res) {
 	});
 	res.status(200).json({
 		message: "Food Partner logged in successfully",
-		user: {
+		food_Partner: {
 			_id: foodPartner._id,
 			name: foodPartner.name,
 			email: foodPartner.email,
